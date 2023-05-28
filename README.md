@@ -1,4 +1,4 @@
-# Hashspace Scoop Bucket [![Tester](https://github.com/hashcat26/hashspace/actions/workflows/ci.yml/badge.svg)](https://github.com/hashcat26/hashspace/actions/workflows/tester.yml) [![Excavator](https://github.com/hashcat26/hashspace/actions/workflows/excavator.yml/badge.svg)](https://github.com/hashcat26/hashspace/actions/workflows/excavator.yml)
+# Hashspace Scoop Bucket [![Tester](https://github.com/hashcat26/hashspace/actions/workflows/tester.yml/badge.svg)](https://github.com/hashcat26/hashspace/actions/workflows/tester.yml) [![Excavator](https://github.com/hashcat26/hashspace/actions/workflows/excavator.yml/badge.svg)](https://github.com/hashcat26/hashspace/actions/workflows/excavator.yml)
 Personal and customized bucket created for [Scoop](https://scoop.sh), the Windows command-line installer.
 
 Adding this bucket:
