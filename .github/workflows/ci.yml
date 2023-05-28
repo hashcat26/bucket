@@ -1,4 +1,4 @@
-name: Verifier
+name: Tester
 
 on:
   push:
