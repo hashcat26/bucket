@@ -1,4 +1,4 @@
-name: 🔢 Hash Error
+name: Hash Error
 description: Open an issue about a package's hash is incorrect.
 labels: ["bug"]
 body:
