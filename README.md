@@ -1,9 +1,10 @@
-# Hashspace Scoop Bucket
-[![Tests](https://github.com/hashcat26/hashspace/actions/workflows/ci.yml/badge.svg)](https://github.com/hashcat26/hashspace/actions/workflows/ci.yml) [![Excavator](https://github.com/hashcat26/hashspace/actions/workflows/excavator.yml/badge.svg)](https://github.com/hashcat26/hashspace/actions/workflows/excavator.yml)
+# Hashspace Scoop Bucket [![Tests](https://github.com/hashcat26/hashspace/actions/workflows/ci.yml/badge.svg)](https://github.com/hashcat26/hashspace/actions/workflows/ci.yml) [![Excavator](https://github.com/hashcat26/hashspace/actions/workflows/excavator.yml/badge.svg)](https://github.com/hashcat26/hashspace/actions/workflows/excavator.yml)
+Custom bucket created for [Scoop](https://scoop.sh), the Windows command-line installer.
 
-Hashspace bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
+## Adding this bucket:
+------------------------------------------------------------------
+To add this bucket, run `scoop bucket add hashspace https://github.com/hashcat26/hashspace`.
 
-
-How do I install these manifests?
----------------------------------
-To add this bucket, run `scoop bucket add hashspace https://github.com/hashcat26/hashspace`. To install, do `scoop install <manifest>`.
+## Installing applications:
+------------------------------------------------------------------
+To install applications which are included in this bucket, do `scoop install <application name>`.
