@@ -7,4 +7,4 @@ To add this bucket, run `scoop bucket add hashspace https://github.com/hashcat26
 
 Installing applications:
 ---------------------------------
-To install applications which are included in this bucket, do `scoop install <application>`.
+To install applications included in this bucket, do `scoop install hashspace/<application>`.
