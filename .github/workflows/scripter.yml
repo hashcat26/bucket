@@ -22,11 +22,12 @@ jobs:
           path: scoop_main
       - name: Push New Registers
         shell: bash
+        working-directory: hashspace
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
-          if !git diff --exit-code; then
-              git add scoop_main/scripts
-              git commit -m "update scripts"
-              git push
-          fi
+          rm -rf scripts
+          cp -rf ../scoop_main/scripts .
+          git add .
+          git commit -m "update scripts"
+          git push
