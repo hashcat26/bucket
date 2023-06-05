@@ -22,9 +22,13 @@ jobs:
         uses: actions/checkout@main
         with:
           repository: ScoopInstaller/Main
-          path: scoop
+          path: scoop_main
       - name: Push New Registers
         shell: bash
+        working-directory: scoop_main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
-          .\hashspace\bin\test.ps1
+          git add scripts
+          git commit -m "update scripts"
+          git push
