@@ -1,16 +1,21 @@
+name: Updater
+
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - 'master'
   schedule:
-    # run every 4 hours
-    - cron: '20 */4 * * *'
-name: Excavator
+    - cron: '0 */8 * * *'
+
 jobs:
   excavate:
-    name: Excavate
+    name: App Update
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@main
-      - name: Excavate
+      - name: Checkout Bucket
+        uses: actions/checkout@main
+      - name: Update New Manifests
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -56,6 +56,10 @@
             "Git GUI"
         ]
     ],
+    "persist": [
+        "etc\\profile.d",
+        "etc\\gitconfig"
+    ],
     "env_set": {
         "GIT_INSTALL_ROOT": "$dir"
     },
