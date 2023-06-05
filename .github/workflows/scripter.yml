@@ -27,7 +27,7 @@ jobs:
         working-directory: hashspace
         run: |
           git config user.name 'github-actions[bot]'
-          git config user.email 'dowaitodoratore@gmail.com'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
           cp -rf ../scoop/scripts/{7-zip,git,python} .
           git add -A
           git commit -m "update scripts"
