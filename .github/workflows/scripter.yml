@@ -21,15 +21,14 @@ jobs:
         uses: actions/checkout@main
         with:
           repository: ScoopInstaller/Main
-          path: scoop_main
+          path: scoop
       - name: Push New Registers
         shell: bash
         working-directory: hashspace
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "dowaitodoratore@gmail.com"
-          rm -rf scripts
-          cp -rf ../scoop_main/scripts .
-          git add .
+          git config user.name 'github-actions[bot]'
+          git config user.email 'dowaitodoratore@gmail.com'
+          cp -rf ../scoop/scripts/{7-zip,git,python} .
+          git add -A
           git commit -m "update scripts"
           git push
