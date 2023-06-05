@@ -2,8 +2,10 @@ name: Scripter
 
 on:
   workflow_dispatch:
+  push:
+    branches: 'master'
   schedule:
-    - cron: '0 */8 * * *'
+    - cron: '0 */12 * * *'
 
 jobs:
   duplicate:
@@ -25,7 +27,7 @@ jobs:
         working-directory: hashspace
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "actions@github.com"
+          git config user.email "dowaitodoratore@gmail.com"
           rm -rf scripts
           cp -rf ../scoop_main/scripts .
           git add .
