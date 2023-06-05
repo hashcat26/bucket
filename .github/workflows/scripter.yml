@@ -2,9 +2,6 @@ name: Scripter
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - 'master'
   schedule:
     - cron: '0 */8 * * *'
 
@@ -25,10 +22,11 @@ jobs:
           path: scoop_main
       - name: Push New Registers
         shell: bash
-        working-directory: scoop_main
         run: |
-          git add scripts
           git config user.name "github-actions[bot]"
-          git config user.email "dowaitodoratore@gmail.com"
-          git commit -m "update scripts"
-          git push
+          git config user.email "actions@github.com"
+          if !git diff --exit-code; then
+              git add scoop_main/scripts
+              git commit -m "update scripts"
+              git push
+          fi

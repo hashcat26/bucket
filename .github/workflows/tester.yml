@@ -3,10 +3,7 @@ name: Tester
 on:
   workflow_dispatch:
   push:
-    branches:
-      - 'master'
-  schedule:
-    - cron: '0 */8 * * *'
+    - branches: 'master'
 
 jobs:
   legacy:
