@@ -1,5 +1,9 @@
-*.sublime-workspace
 *~
 ._*
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
 page.html
 checkver-*.html
