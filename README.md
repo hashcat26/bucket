@@ -1,5 +1,5 @@
-# Hashspace Scoop Bucket [![Tester](https://github.com/hashcat26/hashspace/actions/workflows/tester.yml/badge.svg)](https://github.com/hashcat26/hashspace/actions/workflows/tester.yml) [![Updater](https://github.com/hashcat26/hashspace/actions/workflows/updater.yml/badge.svg)](https://github.com/hashcat26/hashspace/actions/workflows/updater.yml) [![Scripter](https://github.com/hashcat26/hashspace/actions/workflows/scripter.yml/badge.svg)](https://github.com/hashcat26/hashspace/actions/workflows/scripter.yml)
-Personal and customized bucket created for [Scoop](https://scoop.sh), the Windows command-line installer.
+# Hashcat's Scoop Bucket [![Tester](https://github.com/hashcat26/bucket/actions/workflows/tester.yml/badge.svg)](https://github.com/hashcat26/bucket/actions/workflows/tester.yml) [![Updater](https://github.com/hashcat26/bucket/actions/workflows/updater.yml/badge.svg)](https://github.com/hashcat26/bucket/actions/workflows/updater.yml) [![Scripter](https://github.com/hashcat26/bucket/actions/workflows/scripter.yml/badge.svg)](https://github.com/hashcat26/bucket/actions/workflows/scripter.yml)
+Customized bucket created for [Scoop](https://scoop.sh), the Windows command-line installer.
 
 Adding this bucket:
 ---------------------------------
