@@ -31,7 +31,7 @@ jobs:
         shell: powershell
         run: |
           $env:SCOOP_HOME="$(Convert-Path '.\scoop')"
-          .\hashcat\bin\test.ps1
+          .\hashcat\binaries\test.ps1
   latest:
     name: Latest Test
     runs-on: windows-latest
@@ -55,4 +55,4 @@ jobs:
         shell: pwsh
         run: |
           $env:SCOOP_HOME="$(Convert-Path '.\scoop')"
-          .\hashcat\bin\test.ps1
+          .\hashcat\binaries\test.ps1
