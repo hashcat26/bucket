@@ -3,7 +3,7 @@ Customized bucket created for [Scoop](https://scoop.sh), the Windows command-lin
 
 Adding this bucket:
 ---------------------------------
-To add this bucket, run `scoop bucket add hashcat https://github.com/hashcat26/bucket`.
+To add this bucket, run `scoop bucket add hashcat https://github.com/hashcat26/bucket`.\
 To check if the bucket was included in the list of available buckets, run `scoop bucket list`.
 
 Installing applications:
