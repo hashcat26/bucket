@@ -21,8 +21,8 @@ jobs:
         uses: actions/checkout@main
         with:
           repository: ScoopInstaller/Scoop
-          path: scoop_core
-      - name: Init Test Suite
+          path: scoop
+      - name: Initialize Validators
         uses: potatoqualitee/psmodulecache@v5.1
         with:
           modules-to-cache: BuildHelpers
@@ -30,7 +30,7 @@ jobs:
       - name: Test Bucket
         shell: powershell
         run: |
-          $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
+          $env:SCOOP_HOME="$(Convert-Path '.\scoop')"
           .\hashcat\binaries\test.ps1
   latest:
     name: Latest Test
@@ -45,8 +45,8 @@ jobs:
         uses: actions/checkout@main
         with:
           repository: ScoopInstaller/Scoop
-          path: scoop_core
-      - name: Init Test Suite
+          path: scoop
+      - name: Initialize Validators
         uses: potatoqualitee/psmodulecache@v5.1
         with:
           modules-to-cache: BuildHelpers
@@ -54,5 +54,5 @@ jobs:
       - name: Test Bucket
         shell: pwsh
         run: |
-          $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
+          $env:SCOOP_HOME="$(Convert-Path '.\scoop')"
           .\hashcat\binaries\test.ps1
