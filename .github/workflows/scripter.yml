@@ -17,18 +17,24 @@ jobs:
         with:
           fetch-depth: 2
           path: hashcat
-      - name: Checkout Scoop
+      - name: Checkout Main
         uses: actions/checkout@main
         with:
           repository: ScoopInstaller/Main
-          path: scoop
+          path: main
+      - name: Checkout Extras
+        uses: actions/checkout@main
+        with:
+          repository: ScoopInstaller/Extras
+          path: extras
       - name: Push New Registers
         shell: bash
         working-directory: hashcat
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          cp -rf ../scoop/scripts/{7-zip,git,python} scripts
+          cp -rf ../main/scripts/{7-zip,git,python} scripts
+          cp -rf ../extras/scripts/{vscode} scripts
           git add -A
           git diff-index --quiet HEAD || git commit -m "update scripts"
           git push
