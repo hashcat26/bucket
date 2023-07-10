@@ -27,7 +27,7 @@ jobs:
         with:
           repository: ScoopInstaller/Extras
           path: extras
-      - name: Push New Registers
+      - name: Push Registries
         shell: bash
         working-directory: hashcat
         run: |
