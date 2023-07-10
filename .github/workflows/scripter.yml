@@ -33,7 +33,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          cp -rf ../main/scripts/{7-zip,git,python} registries
+          cp -rf ../main/scripts/{7-zip,git,python} scripts/python
           # cp -rf ../extras/scripts/{vscode} scripts
           git add -A
           git diff-index --quiet HEAD || git commit -m "update scripts"
