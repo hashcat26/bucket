@@ -10,6 +10,9 @@
         "    Copy-Item \"$dir\\vendor\\ConEmu.xml.default\" \"$dir\\vendor\\conemu-maximus5\\ConEmu.xml\"",
         "}"
     ],
+    "post_install": [
+        "Start-Process -FilePath \"$dir\\vendor\\init.bat\" -NoNewWindow | Out-Null"
+    ],
     "bin": "Cmder.exe",
     "shortcuts": [
         [

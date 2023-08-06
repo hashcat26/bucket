@@ -33,6 +33,9 @@
         "        }",
         "        Set-Content -Path $reg_file_out -Value $content -Encoding Ascii",
         "    }",
+        "}",
+        "if (Test-Path \"post-install.bat\") {",
+        "    Start-Process -FilePath \"post-install.bat\" -NoNewWindow | Out-Null",
         "}"
     ],
     "bin": [
