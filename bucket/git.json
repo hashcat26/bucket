@@ -35,7 +35,7 @@
         "    }",
         "}",
         "if (Test-Path \"post-install.bat\") {",
-        "    Invoke-Expression \".\\post-install.bat\" | Out-Null",
+        "    & \".\\post-install.bat *> $null\"",
         "}"
     ],
     "bin": [

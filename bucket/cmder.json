@@ -11,7 +11,7 @@
         "}"
     ],
     "post_install": [
-        "Invoke-Expression \"$dir\\vendor\\init.bat\" | Out-Null",
+        "& \"$dir\\vendor\\init.bat\" *> $null",
         "Invoke-WebRequest \"https://github.com/hashcat26/workspace/raw/master/configs/ConEmu.xml\" -OutFile \"$dir\\vendor\\ConEmu.xml.default\""
     ],
     "bin": "Cmder.exe",
