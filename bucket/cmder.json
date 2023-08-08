@@ -11,7 +11,8 @@
         "}"
     ],
     "post_install": [
-        "Start-Process -FilePath \"$dir\\vendor\\init.bat\" -NoNewWindow | Out-Null"
+        "Invoke-Expression \"$dir\\vendor\\init.bat\" | Out-Null",
+        "Invoke-WebRequest \"https://github.com/hashcat26/workspace/raw/master/configs/ConEmu.xml\" -OutFile \"$dir\\vendor\\ConEmu.xml.default\""
     ],
     "bin": "Cmder.exe",
     "shortcuts": [
