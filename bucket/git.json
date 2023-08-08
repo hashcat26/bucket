@@ -35,7 +35,7 @@
         "    }",
         "}",
         "if (Test-Path \"post-install.bat\") {",
-        "    & \".\\post-install.bat *> $null\"",
+        "    & \".\\git-cmd.exe\" --no-needs-console --no-cd --command=post-install.bat *> $null",
         "}"
     ],
     "bin": [
