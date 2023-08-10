@@ -60,7 +60,9 @@
         "    info 'Adjusting path in extensions file...'",
         "    (Get-Content \"$extensions_file\") -replace '(?<=vscode(/|\\\\\\\\)).*?(?=(/|\\\\\\\\)data(/|\\\\\\\\)extensions)', $version | Set-Content \"$extensions_file\"",
         "}",
-        "New-Item -ItemType Directory -Path \"$dir\\data\\user-data\\User\" -Force | Out-Null"
+        "if (!(Test-Path \"$dir\\data\\user-data\\User\")) {",
+        "    New-Item -ItemType Directory -Path \"$dir\\data\\user-data\\User\" *> $null",
+        "}"
     ],
     "uninstaller": {
         "script": "if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" }"
