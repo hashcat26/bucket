@@ -61,7 +61,7 @@
         "    (Get-Content \"$extensions_file\") -replace '(?<=vscode(/|\\\\\\\\)).*?(?=(/|\\\\\\\\)data(/|\\\\\\\\)extensions)', $version | Set-Content \"$extensions_file\"",
         "}",
         "if (!(Test-Path \"$dir\\data\\user-data\\User\")) {",
-        "    New-Item -ItemType Directory -Path \"$dir\\data\\user-data\\User\" *> $null",
+        "    New-Item -ItemType Directory -Path \"$dir\\data\\user-data\\User\" | Out-Null",
         "}"
     ],
     "uninstaller": {
