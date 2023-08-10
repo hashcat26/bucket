@@ -35,7 +35,7 @@
         "    }",
         "}",
         "if (Test-Path \"post-install.bat\") {",
-        "    Start-Process -FilePath \"post-install.bat\" -NoNewWindow | Out-Null",
+        "    Invoke-Expression \"git-cmd --no-needs-console --no-cd --command=post-install.bat\"",
         "}"
     ],
     "bin": [
