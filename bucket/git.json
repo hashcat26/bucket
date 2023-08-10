@@ -36,7 +36,7 @@
         "}",
         "if (Test-Path \"$dir\\post-install.bat\") {",
         "    Push-Location \"$dir\"",
-        "    Invoke-Expression \"$dir\\git-cmd.exe --no-needs-console --no-cd --command=post-install.bat\"",
+        "    Invoke-Expression \"$dir\\git-cmd.exe --no-needs-console --no-cd --command=post-install.bat\" *> $null",
         "    Pop-Location -PassThru",
         "}"
     ],
