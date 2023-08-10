@@ -34,8 +34,10 @@
         "        Set-Content -Path $reg_file_out -Value $content -Encoding Ascii",
         "    }",
         "}",
-        "if (Test-Path \"post-install.bat\") {",
-        "    Invoke-Expression \"post-install.bat\"",
+        "if (Test-Path \"$dir\\post-install.bat\") {",
+        "    Push-Location \"$dir\"",
+        "    Invoke-Expression \"$dir\\git-cmd.exe --no-needs-console --no-cd --command=post-install.bat\"",
+        "    Pop-Location -PassThru",
         "}"
     ],
     "bin": [
