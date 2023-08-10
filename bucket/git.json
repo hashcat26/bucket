@@ -34,8 +34,8 @@
         "        Set-Content -Path $reg_file_out -Value $content -Encoding Ascii",
         "    }",
         "}",
-        "if (Test-Path \"$dir\\post-install.bat\") {",
-        "    Invoke-Expression \"$dir\\post-install.bat\"",
+        "if (Test-Path \"post-install.bat\") {",
+        "    Invoke-Expression \"post-install.bat\"",
         "}"
     ],
     "bin": [
