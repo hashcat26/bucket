@@ -42,12 +42,6 @@
         "7zFM.exe",
         "7zG.exe"
     ],
-    "shortcuts": [
-        [
-            "7zFM.exe",
-            "7-Zip"
-        ]
-    ],
     "persist": [
         "Codecs",
         "Formats"

@@ -10,12 +10,12 @@
             "extract_dir": "ffmpeg-6.0-full_build"
         }
     },
-    "persist": "fonts",
     "bin": [
         "bin\\ffmpeg.exe",
         "bin\\ffplay.exe",
         "bin\\ffprobe.exe"
     ],
+    "persist": "fonts",
     "checkver": {
         "url": "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z.ver",
         "regex": "([\\d.]+)"
