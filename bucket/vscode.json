@@ -55,8 +55,9 @@
         "    (Get-Content \"$extensions_file\") -replace '(?<=vscode(/|\\\\\\\\)).*?(?=(/|\\\\\\\\)data(/|\\\\\\\\)extensions)', $version | Set-Content \"$extensions_file\"",
         "}",
         "if (!(Test-Path \"$dir\\data\\user-data\\User\")) {",
+        "    $ErrorActionPreference = \"SilentlyContinue\"",
         "    New-Item -ItemType Directory -Path \"$dir\\data\\user-data\\User\" *> $null",
-        "    Invoke-Expression \"$dir\\bin\\code.cmd --install-extension ms-vscode.powershell --install-extension ms-python.python\" -ErrorAction Ignore *> $null",
+        "    Invoke-Expression \"$dir\\bin\\code.cmd --install-extension ms-vscode.powershell --install-extension ms-python.python\" *> $null",
         "}"
     ],
     "uninstaller": {
