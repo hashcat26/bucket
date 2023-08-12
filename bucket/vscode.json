@@ -56,7 +56,7 @@
         "}",
         "if (!(Test-Path \"$dir\\data\\user-data\\User\")) {",
         "    New-Item -ItemType Directory -Path \"$dir\\data\\user-data\\User\" *> $null",
-        "    Invoke-Expression \"$dir\\Code.exe --install-extension ms-vscode.powershell --install-extension ms-python.python\" *> $null",
+        "    Invoke-Expression \"code --install-extension ms-vscode.powershell --install-extension ms-python.python\" *> $null",
         "}"
     ],
     "uninstaller": {
