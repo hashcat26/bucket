@@ -49,6 +49,7 @@
         "   New-Item -Path \"$dir\\SciTE\" -Value \"$editor\" -ItemType Junction | Out-Null",
         "}"
     ],
+    "persist": "SciTe\\SciTEUser.properties",
     "checkver": {
         "url": "https://www.autoitscript.com/site/autoit/downloads/",
         "regex": "<td>v([\\d.]+)</td>"
