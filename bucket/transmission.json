@@ -28,6 +28,7 @@
         "transmission-remote.exe",
         "transmission-show.exe"
     ],
+    "persist": "qt.conf",
     "checkver": {
         "github": "https://github.com/transmission/transmission"
     },
