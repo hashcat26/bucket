@@ -16,6 +16,7 @@
         }
     },
     "bin": "aria2c.exe",
+    "persist": "dependencies",
     "checkver": {
         "github": "https://github.com/aria2/aria2",
         "regex": "/release-(?:[\\d.]+)/aria2-(?<version>[\\d.]+)-win-64bit-build(?<build>[\\d]+)\\.zip",
