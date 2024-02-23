@@ -19,7 +19,7 @@
     ],
     "pre_install": "Set-Content \"$dir\\logisim-evolution.bat\" '@start javaw.exe -jar \"%~dp0logisim-evolution.jar\" %*' -Encoding Ascii",
     "env_add_path": ".",
-    "bin": "logisim-evolution.bat",
+    "persist": "boards",
     "checkver": "github",
     "autoupdate": {
         "url": [
