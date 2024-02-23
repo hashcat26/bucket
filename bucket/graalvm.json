@@ -20,6 +20,10 @@
         "JAVA_HOME": "$dir",
         "GRAALVM_HOME": "$dir"
     },
+    "persist": [
+        "conf",
+        "lib\\jvm.cfg"
+    ],
     "checkver": {
         "url": "https://www.oracle.com/java/technologies/downloads/",
         "useragent": "Mozilla/5.0",
