@@ -10,41 +10,18 @@
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$*\" -Recurse",
-    "bin": "bin\\kicad-cli.exe",
-    "shortcuts": [
-        [
-            "bin\\kicad.exe",
-            "KiCad"
-        ],
-        [
-            "bin\\eeschema.exe",
-            "Schematic Editor"
-        ],
-        [
-            "bin\\pcbnew.exe",
-            "PCB Editor"
-        ],
-        [
-            "bin\\gerbview.exe",
-            "Gerber Viewer"
-        ],
-        [
-            "bin\\pcb_calculator.exe",
-            "Calculator Tools"
-        ],
-        [
-            "bin\\pl_editor.exe",
-            "Drawing Sheet Editor"
-        ],
-        [
-            "bin\\bitmap2component.exe",
-            "Image Converter"
-        ],
-        [
-            "bin\\kicad-cmd.bat",
-            "KiCad Command Prompt"
-        ]
+    "bin": [
+        "bin\\kicad-cli.exe",
+        "bin\\kicad.exe",
+        "bin\\eeschema.exe",
+        "bin\\pcbnew.exe",
+        "bin\\gerbview.exe",
+        "bin\\pcb_calculator.exe",
+        "bin\\pl_editor.exe",
+        "bin\\bitmap2component.exe",
+        "bin\\kicad-cmd.bat"
     ],
+    "persist": "etc\\fonts\\conf.d\\51-local.conf",
     "checkver": {
         "github": "https://github.com/KiCad/kicad-source-mirror/"
     },
