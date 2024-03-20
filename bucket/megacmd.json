@@ -102,16 +102,6 @@
         "mega-webdav.bat",
         "mega-whoami.bat"
     ],
-    "shortcuts": [
-        [
-            "MEGAcmdServer.exe",
-            "MEGAcmd Server"
-        ],
-        [
-            "MEGAcmdShell.exe",
-            "MEGAcmd Shell"
-        ]
-    ],
     "persist": ".megaCmd",
     "checkver": {
         "url": "https://github.com/meganz/MEGAcmd/tags",
