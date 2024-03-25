@@ -26,12 +26,6 @@
         "UnRAR.exe",
         "WinRAR.exe"
     ],
-    "shortcuts": [
-        [
-            "WinRAR.exe",
-            "WinRAR"
-        ]
-    ],
     "persist": [
         "rarreg.key",
         "WinRar.ini",
