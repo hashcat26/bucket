@@ -19,12 +19,6 @@
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\rufus.ini\")) { New-Item \"$dir\\rufus.ini\" | Out-Null }",
     "bin": "rufus.exe",
-    "shortcuts": [
-        [
-            "rufus.exe",
-            "Rufus"
-        ]
-    ],
     "persist": [
         "rufus.ini",
         "rufus_files"
