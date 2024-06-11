@@ -22,12 +22,7 @@
         }
     },
     "bin": "draw.io.exe",
-    "shortcuts": [
-        [
-            "draw.io.exe",
-            "draw.io"
-        ]
-    ],
+    "persist": "resources\\app-update.yml",
     "checkver": {
         "github": "https://github.com/jgraph/drawio-desktop"
     },
