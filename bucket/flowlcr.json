@@ -10,8 +10,12 @@
         }
     },
     "extract_dir": "FlowLauncher",
-    "pre_install": "Set-Content \"$dir\\flowlcr.bat\" '@start \"%~dp0Flow.Launcher.exe\"' -Encoding Ascii",
-    "bin": "flowlcr.bat",
+    "bin": [
+        [
+            "Flow.Launcher.exe",
+            "flowlcr"
+        ]
+    ],
     "persist": [
         [
             "app-1.18.0\\UserData",
