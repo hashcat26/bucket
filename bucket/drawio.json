@@ -21,7 +21,12 @@
             ]
         }
     },
-    "bin": "draw.io.exe",
+    "bin": [
+        [
+            "draw.io.exe",
+            "drawio"
+        ]
+    ],
     "persist": "resources\\app-update.yml",
     "checkver": {
         "github": "https://github.com/jgraph/drawio-desktop"
