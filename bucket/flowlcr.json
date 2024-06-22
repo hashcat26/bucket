@@ -10,9 +10,10 @@
         }
     },
     "extract_dir": "FlowLauncher",
-    "shortcuts": [
+    "pre_install": "Set-Content \"$dir\\flowlcr.bat\" '@start Flow.Launcher.exe' -Encoding Ascii",
+    "bin": [
         [
-            "Flow.Launcher.exe",
+            "flowlcr.bat",
             "Flow Launcher"
         ]
     ],
