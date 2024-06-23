@@ -14,12 +14,22 @@
             "hash": "8e71b58882a9e510574eb3838bf1128964d080eb9f3b9531f2e29f2480573ca3"
         }
     },
+    "post_install": [
+        "if (!(Test-Path \"$dir\\config\")) {",
+        "    $ErrorActionPreference = \"SilentlyContinue\"",
+        "    New-Item -ItemType Directory -Path \"$dir\\config\" *> $null",
+        "}"
+    ],
     "bin": [
         "komorebi.exe",
         "komorebic.exe",
         "komorebic-no-console.exe",
         "komorebi-gui.exe"
     ],
+    "persist": "config",
+    "env_set": {
+        "KOMOREBI_CONFIG_HOME": "$dir\\config"
+    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {
