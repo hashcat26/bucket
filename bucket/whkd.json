@@ -16,7 +16,7 @@
         "}"
     ],
     "bin": "whkd.exe",
-    "persist": "config\\whkdrc",
+    "persist": "config",
     "env_set": {
         "WHKD_CONFIG_HOME": "$dir\\config"
     },
