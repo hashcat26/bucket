@@ -9,7 +9,17 @@
             "hash": "90067cff45c8a2ebef0eb6b7842d34d4ae65e3d8e2450770cd9a1cc8adfb2100"
         }
     },
+    "post_install": [
+        "if (!(Test-Path \"$dir\\config\")) {",
+        "    $ErrorActionPreference = \"SilentlyContinue\"",
+        "    New-Item -ItemType Directory -Path \"$dir\\config\" *> $null",
+        "}"
+    ],
     "bin": "whkd.exe",
+    "persist": "config\\whkdrc",
+    "env_set": {
+        "WHKD_CONFIG_HOME": "$dir\\config"
+    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {
