@@ -13,7 +13,17 @@
             "hash": "9c339c4626590d278431563d834e5511d8fd6667df304f0d864363e8b6f9b1e6"
         }
     },
+    "post_install": [
+        "if (!(Test-Path \"$dir\\nushell\")) {",
+        "    $ErrorActionPreference = \"SilentlyContinue\"",
+        "    New-Item -ItemType Directory -Path \"$dir\\nushell\" *> $null",
+        "}"
+    ],
     "bin": "nu.exe",
+    "persist": "nushell",
+    "env_set": {
+        "NU_INSTALL_ROOT": "$dir"
+    },
     "checkver": {
         "github": "https://github.com/nushell/nushell"
     },
