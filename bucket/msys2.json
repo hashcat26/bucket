@@ -10,7 +10,7 @@
             "extract_dir": "msys64"
         }
     },
-    "post_install": "Invoke-Expression \"$dir\\msys2.exe\" *> $null",
+    "post_install": "Invoke-Expression \"$dir\\usr\\bin\\bash.exe -lc true\" *> $null",
     "bin": [
         [
             "msys2_shell.cmd",
