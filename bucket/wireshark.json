@@ -27,7 +27,7 @@
     },
     "post_install": [
         "Get-ChildItem \"$bucketsdir\\extras\\scripts\\wireshark\" | Copy-Item -Force -Destination \"$dir\"",
-        "& \"$dir\\enable-usbpcap.ps1\" 2>$null   # Attempt try to enable USBPcap if already installed"
+        "& \"$dir\\enable-usbpcap.ps1\" 2>$null"
     ],
     "bin": [
         "capinfos.exe",
@@ -40,12 +40,6 @@
         "text2pcap.exe",
         "tshark.exe",
         "Wireshark.exe"
-    ],
-    "shortcuts": [
-        [
-            "Wireshark.exe",
-            "Wireshark"
-        ]
     ],
     "env_set": {
         "WIRESHARK_CONFIG_DIR": "$dir\\Data",
