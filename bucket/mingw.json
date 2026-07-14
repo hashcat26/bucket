@@ -1,6 +1,6 @@
 {
     "version": "20.0",
-    "description": "Nuwen's MinGW Distro with GCC, GDB, make, binutils, coreutils, 7zip and extra headers",
+    "description": "Nuwen's MinGW Distro with GCC, GDB, make, binutils, coreutils, 7zip and extra headers.",
     "homepage": "https://nuwen.net/mingw.html",
     "license": "GPL-2.0-only",
     "architecture": {
@@ -15,7 +15,6 @@
         "C_INCLUDE_PATH": "$dir\\include;$dir\\include\\freetype2",
         "CPLUS_INCLUDE_PATH": "$dir\\include;$dir\\include\\freetype2"
     },
-    "persist": "lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\install-tools\\mkheaders.conf",
     "checkver": {
         "regex": "mingw-([\\d.]+).exe"
     },

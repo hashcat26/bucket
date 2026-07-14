@@ -1,4 +1,3 @@
-
 {
     "version": "25.12",
     "description": "MikTeX, an up-to-date implementation of TeX/LaTeX and related programs.",
@@ -10,7 +9,15 @@
     "architecture": {
         "64bit": {
             "url": "https://mirrors.mit.edu/CTAN/systems/win32/miktex/setup/windows-x64/basic-miktex-25.12-x64.exe",
-            "hash": "14b42dd9f4b4a7813a8bfd69c8f99316c2888cc4ee26f631f397e163d85d6c62"
+            "hash": "14b42dd9f4b4a7813a8bfd69c8f99316c2888cc4ee26f631f397e163d85d6c62",
+            "env_add_path": "texmfs\\install\\miktex\\bin\\x64",
+            "bin": [
+                [
+                    "texmfs\\install\\miktex\\bin\\x64\\miktex-console.exe",
+                    "miktex",
+                    "--hide --mkmaps"
+                ]
+            ]
         }
     },
     "installer": {
@@ -20,14 +27,6 @@
             "--private"
         ]
     },
-    "bin": [
-        [
-            "texmfs\\install\\miktex\\bin\\x64\\miktex-console.exe",
-            "miktex",
-            "--hide --mkmaps"
-        ]
-    ],
-    "env_add_path": "texmfs\\install\\miktex\\bin\\x64",
     "persist": "texmfs\\config",
     "checkver": {
         "url": "https://miktex.org/download",

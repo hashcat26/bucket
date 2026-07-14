@@ -32,7 +32,6 @@
         "perl\\site\\bin",
         "perl\\bin"
     ],
-    "persist": "data",
     "checkver": {
         "github": "https://api.github.com/repos/StrawberryPerl/Perl-Dist-Strawberry/releases/latest",
         "jsonpath": "$..browser_download_url",

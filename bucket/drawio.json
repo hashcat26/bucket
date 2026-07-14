@@ -1,6 +1,6 @@
 {
     "version": "30.3.6",
-    "description": "Professional diagramming",
+    "description": "Professional diagramming.",
     "homepage": "https://www.diagrams.net",
     "license": "Apache-2.0",
     "architecture": {
@@ -27,7 +27,6 @@
             "drawio"
         ]
     ],
-    "persist": "resources\\app-update.yml",
     "checkver": {
         "github": "https://github.com/jgraph/drawio-desktop"
     },

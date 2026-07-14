@@ -1,6 +1,6 @@
 {
     "version": "4.1.0",
-    "description": "Digital logic design tool and simulator",
+    "description": "Digital logic design tool and simulator.",
     "homepage": "https://github.com/logisim-evolution/logisim-evolution",
     "license": "GPL-3.0-only",
     "suggest": {
@@ -19,7 +19,6 @@
     ],
     "pre_install": "Set-Content \"$dir\\logisim.bat\" '@start javaw.exe -jar \"%~dp0logisim-evolution.jar\" %*' -Encoding Ascii",
     "bin": "logisim.bat",
-    "persist": "boards",
     "checkver": "github",
     "autoupdate": {
         "url": [
