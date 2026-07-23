@@ -35,7 +35,7 @@ jobs:
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           cp -rf ../main/scripts/{7-zip,git,python} scripts
           cp -rf ../extras/scripts/{vscode,wireshark} scripts
-          mv -f scripts/7-zip scripts/7zip
+          rm -rf scripts/7zip && mv scripts/7-zip scripts/7zip
           git add -A
           git diff-index --quiet HEAD || git commit -m "update scripts"
           git push
