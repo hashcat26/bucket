@@ -1,6 +1,6 @@
 {
     "version": "0.116.0",
-    "description": "A modern shell written in Rust.",
+    "description": "A modern shell written in Rust",
     "homepage": "https://www.nushell.sh",
     "license": "MIT",
     "notes": [
@@ -33,17 +33,16 @@
         "    '    plugin add ($nu.current-exe | path dirname | path join (''nu_plugin_'' + $p + ''.exe''))'",
         "    '}'",
         ")",
-        "Set-Content -LiteralPath \"$dir\\register-core-plugins.nu\" -Value $helper -Encoding ascii",
-        "if (!(Test-Path \"$dir\\nushell\")) {",
-        "    $ErrorActionPreference = \"SilentlyContinue\"",
-        "    New-Item -ItemType Directory -Path \"$dir\\nushell\" *> $null",
-        "}"
+        "Set-Content -LiteralPath \"$dir\\register-core-plugins.nu\" -Value $helper -Encoding ascii"
     ],
-    "env_set": {
-        "NU_INSTALL_ROOT": "$dir"
-    },
     "bin": "nu.exe",
-    "persist": "nushell",
+    "shortcuts": [
+        [
+            "nu.exe",
+            "Nushell",
+            "--execute \"cd ~\""
+        ]
+    ],
     "post_uninstall": [
         "if ($purge) {",
         "    $Directories = [string[]](",

@@ -1,6 +1,6 @@
 {
     "version": "26.03",
-    "description": "A multi-format file archiver with high compression ratios.",
+    "description": "A multi-format file archiver with high compression ratios",
     "homepage": "https://www.7-zip.org",
     "license": {
         "identifier": "BSD-2-Clause, BSD-3-Clause, LGPL-2.1-or-later",
@@ -47,6 +47,16 @@
         "7z.exe",
         "7zG.exe",
         "7zFM.exe"
+    ],
+    "shortcuts": [
+        [
+            "7zFM.exe",
+            "7-Zip\\7-Zip File Manager"
+        ],
+        [
+            "7-zip.chm",
+            "7-Zip\\7-Zip Help"
+        ]
     ],
     "persist": [
         "Codecs",

@@ -1,6 +1,6 @@
 {
     "version": "3.14.8",
-    "description": "A programming language that lets you work quickly and integrate systems more effectively.",
+    "description": "A programming language that lets you work quickly and integrate systems more effectively",
     "homepage": "https://www.python.org",
     "license": "Python-2.0",
     "notes": [
@@ -69,27 +69,26 @@
     ],
     "uninstaller": {
         "script": [
-            "$global = installed $app $true",
             "if ($global) {",
             "    $pathext = (Get-EnvVar -Name PATHEXT -Global) -replace ';.PYW?', ''",
             "    Set-EnvVar -Name PATHEXT -Value \"$pathext\" -Global",
             "}"
         ]
     },
-    "env_add_path": [
-        "Scripts",
-        "."
-    ],
     "bin": [
         [
             "python.exe",
             "python3"
         ],
+        "Lib\\idlelib\\idle.bat",
         [
             "Lib\\idlelib\\idle.bat",
             "idle3"
-        ],
-        "Lib\\idlelib\\idle.bat"
+        ]
+    ],
+    "env_add_path": [
+        "Scripts",
+        "."
     ],
     "persist": [
         "Scripts",
