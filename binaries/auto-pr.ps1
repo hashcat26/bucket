@@ -1,9 +1,12 @@
-param(
-    # overwrite upstream param
-    [String]$upstream = "hashcat26/bucket:master"
+param (
+    [String]$Upstream = "hashcat26/bucket:master"
 )
 
-if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = Convert-Path (scoop prefix scoop) }
-$autopr = "$env:SCOOP_HOME/bin/auto-pr.ps1"
-$dir = "$PSScriptRoot/../bucket" # checks the parent dir
-& $autopr -Dir $dir -Upstream $Upstream @Args
+if (!$Env:SCOOP_HOME) {
+    $Env:SCOOP_HOME = Resolve-Path (scoop prefix scoop)
+}
+
+$AutoPr = "$Env:SCOOP_HOME/bin/auto-pr.ps1"
+$Dir = "$PSScriptRoot/../bucket"
+
+Invoke-Expression -Command "& '$AutoPr' -Dir '$Dir' -Upstream $Upstream $($Args | ForEach-Object {"$_ "})"

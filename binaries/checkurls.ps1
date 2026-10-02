@@ -1,4 +1,8 @@
-if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = Convert-Path (scoop prefix scoop) }
-$checkurls = "$env:SCOOP_HOME/bin/checkurls.ps1"
-$dir = "$PSScriptRoot/../bucket" # checks the parent dir
-& $checkurls -Dir $dir @Args
+if (!$Env:SCOOP_HOME) {
+    $Env:SCOOP_HOME = Resolve-Path (scoop prefix scoop)
+}
+
+$CheckUrls = "$Env:SCOOP_HOME/bin/checkurls.ps1"
+$Dir = "$PSScriptRoot/../bucket"
+
+Invoke-Expression -Command "& '$CheckUrls' -Dir '$Dir' $($Args | ForEach-Object {"$_ "})"

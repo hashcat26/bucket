@@ -1,4 +1,8 @@
-if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = Convert-Path (scoop prefix scoop) }
-$formatjson = "$env:SCOOP_HOME/bin/formatjson.ps1"
-$path = "$PSScriptRoot/../bucket" # checks the parent dir
-& $formatjson -Dir $path @Args
+if (!$Env:SCOOP_HOME) {
+    $Env:SCOOP_HOME = Resolve-Path (scoop prefix scoop)
+}
+
+$FormatJson = "$Env:SCOOP_HOME/bin/formatjson.ps1"
+$Path = "$PSScriptRoot/../bucket"
+
+Invoke-Expression -Command "& '$FormatJson' -Dir '$Path' $($Args | ForEach-Object {"$_ "})"

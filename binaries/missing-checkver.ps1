@@ -1,4 +1,8 @@
-if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = Convert-Path (scoop prefix scoop) }
-$missing_checkver = "$env:SCOOP_HOME/bin/missing-checkver.ps1"
-$dir = "$PSScriptRoot/../bucket" # checks the parent dir
-& $missing_checkver -Dir $dir @Args
+if (!$Env:SCOOP_HOME) {
+    $Env:SCOOP_HOME = Resolve-Path (scoop prefix scoop)
+}
+
+$MissingVer = "$Env:SCOOP_HOME/bin/missing-checkver.ps1"
+$Dir = "$PSScriptRoot/../bucket"
+
+Invoke-Expression -Command "& '$MissingVer' -Dir '$Dir' $($Args | ForEach-Object {"$_ "})"
