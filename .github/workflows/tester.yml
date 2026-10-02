@@ -1,4 +1,4 @@
-name: Tester
+name: Bucket Tests
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   test:
-    name: Bucket Test
+    name: Tester
     runs-on: windows-latest
     strategy:
       matrix:

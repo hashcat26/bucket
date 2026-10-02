@@ -1,4 +1,4 @@
-name: Scripter
+name: Script Updates
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   update:
-    name: Script Update
+    name: Scripter
     runs-on: windows-latest
     steps:
       - name: Checkout Bucket
