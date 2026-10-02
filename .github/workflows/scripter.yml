@@ -3,39 +3,40 @@ name: Scripter
 on:
   workflow_dispatch:
   push:
-    branches: 'master'
+    branches: "master"
   schedule:
-    - cron: '0 */12 * * *'
+    - cron: "0 */8 * * *"
+
+permissions:
+  contents: write
 
 jobs:
-  duplicate:
-    name: Copy Script
+  update:
+    name: Script Update
     runs-on: windows-latest
     steps:
       - name: Checkout Bucket
-        uses: actions/checkout@main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 2
           path: hashcat
       - name: Checkout Main
-        uses: actions/checkout@main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: ScoopInstaller/Main
           path: main
       - name: Checkout Extras
-        uses: actions/checkout@main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: ScoopInstaller/Extras
           path: extras
-      - name: Push Registries
-        shell: bash
+      - name: Update Entries
         working-directory: hashcat
+        shell: bash
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           cp -rf ../main/scripts/{7-zip,git,python} scripts
           cp -rf ../extras/scripts/{vscode,wezterm} scripts
           rm -rf scripts/7zip && mv scripts/7-zip scripts/7zip
-          git add -A
-          git diff-index --quiet HEAD || git commit -m "update scripts"
-          git push
+          git add -A && git diff --cached --quiet || (git commit -m "update scripts" && git push)
