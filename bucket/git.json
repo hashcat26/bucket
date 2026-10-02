@@ -58,7 +58,8 @@
         "}"
     ],
     "env_set": {
-        "GIT_INSTALL_ROOT": "$dir"
+        "GIT_INSTALL_ROOT": "$dir",
+        "GIT_CONFIG_NOSYSTEM": "true"
     },
     "bin": [
         "bin\\sh.exe",
